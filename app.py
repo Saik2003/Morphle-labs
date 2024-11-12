@@ -7,6 +7,11 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return "<h1>Root Route is Working</h1>"
+
+
 @app.route('/htop')
 def htop():
     # Getting the server time in IST
